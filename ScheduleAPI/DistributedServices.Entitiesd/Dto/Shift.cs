@@ -12,6 +12,9 @@ namespace DistributedServices.Entities.Dto
         public System.DateTime Start { get; set; }
         public System.DateTime End { get; set; }
         public int ClientId { get; set; }
+        public int PriorityId { get; set; }
+        public int SeasonId { get; set; }
+        public int ShiftTypeId { get; set; }
         public bool CanAdd { get; set; }
         public bool CanRemove { get; set; }
         public bool CanUpdate { get; set; }

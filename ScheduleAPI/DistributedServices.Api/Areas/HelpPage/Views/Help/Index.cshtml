@@ -5,7 +5,7 @@
 @model Collection<ApiDescription>
 
 @{
-    ViewBag.Title = "Employee API";
+    ViewBag.Title = "Schedule API";
 
     // Group APIs by controller
     ILookup<string, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor.ControllerName);
@@ -23,7 +23,7 @@
         <div class="content-wrapper">
             <h2>Introduction</h2>
             <p>
-                The Employee API provides an interface for creating employee information.
+                The Schedule API provides an interface for creating schedule information.
             </p>
         </div>
     </section>

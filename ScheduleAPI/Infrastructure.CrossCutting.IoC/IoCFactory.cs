@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Practices.Unity;
 using System.Configuration;
 using Infrastructure.Data.MainModule.Repositories;
-using Domain.MainModule.Employees;
-using Domain.MainModule.Persons;
-using Domain.MainModule.EmployeeTypes;
-using Domain.MainModule.EmployeeTitles;
+
 
 namespace Infrastructure.CrossCutting.IoC
 {
@@ -80,22 +77,15 @@ namespace Infrastructure.CrossCutting.IoC
 
 
             //Register Services mappings
-            container.RegisterType<IEmployeeService, EmployeeService>(new TransientLifetimeManager());
-
-            container.RegisterType<IPersonService, PersonService>(new TransientLifetimeManager());
-
-            container.RegisterType<IEmployeeTypeService, EmployeeTypeService>(new TransientLifetimeManager());
-
-            container.RegisterType<IEmployeeTitleService, EmployeeTitleService>(new TransientLifetimeManager());
 
             //Register Repositories mappings
-            container.RegisterType<IEmployeeRepository, ShiftRepository>(new TransientLifetimeManager());
+            container.RegisterType<IShiftRepository, ShiftRepository>(new TransientLifetimeManager());
 
-            container.RegisterType<IPersonRepository, PersonRepository>(new TransientLifetimeManager());
+            container.RegisterType<IShiftTypeRepository, ShiftTypeRepository>(new TransientLifetimeManager());
 
-            container.RegisterType<IEmployeeTypeRepository, EmployeeTypeRepository>(new TransientLifetimeManager());
+            container.RegisterType<ISeasonRepository, SeasonRepository>(new TransientLifetimeManager());
 
-            container.RegisterType<IEmployeeTitleRepository, ShiftTypeRepository>(new TransientLifetimeManager());
+            container.RegisterType<IPriorityRepository, PriorityRepository>(new TransientLifetimeManager());
 
             //Register crosscuting mappings
             // container.RegisterType<ITraceManager, TraceManager>(new TransientLifetimeManager());

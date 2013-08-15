@@ -16,163 +16,163 @@ namespace DistributedServices.Api
             //    defaults: new { id = RouteParameter.Optional }
             //);
 
-            PeopleRoutes(config);
+            ShiftRoutes(config);
 
-            EmployeeRoutes(config);
+            ShiftTypeRoutes(config);
 
-            EmployeeTitleRoutes(config);
+            SeasonRoutes(config);
 
-            EmployeeTypeRoutes(config);
+            PriorityRoutes(config);
         }
 
-        private static void PeopleRoutes(HttpConfiguration config)
+        private static void ShiftRoutes(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "PeopleGetAll",
-                routeTemplate: "api/people",
-                defaults: new { controller = "People", action = "GetAll" },
+                name: "ShiftGetAll",
+                routeTemplate: "api/shifts",
+                defaults: new { controller = "Shift", action = "GetAll" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "Person",
-                routeTemplate: "api/people/{id}",
-                defaults: new { controller = "People", action = "Get" },
+                name: "Shift",
+                routeTemplate: "api/shifts/{id}",
+                defaults: new { controller = "Shifts", action = "Get" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "PersonPost",
-                routeTemplate: "api/people",
-                defaults: new { controller = "People", action = "Post" },
+                name: "ShiftPost",
+                routeTemplate: "api/shifts",
+                defaults: new { controller = "Shifts", action = "Post" },
                 constraints: new { httpMethod = new HttpMethodConstraint("POST") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "PersonPut",
-                routeTemplate: "api/people/{id}",
-                defaults: new { controller = "People", action = "Put" },
+                name: "ShiftPut",
+                routeTemplate: "api/shifts/{id}",
+                defaults: new { controller = "Shifts", action = "Put" },
                 constraints: new { httpMethod = new HttpMethodConstraint("PUT") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "PersonDelete",
-                routeTemplate: "api/people/{id}",
-                defaults: new { controller = "People", action = "Delete" },
+                name: "ShiftDelete",
+                routeTemplate: "api/shifts/{id}",
+                defaults: new { controller = "Shifts", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }
 
-        private static void EmployeeTitleRoutes(HttpConfiguration config)
+        private static void ShiftTypeRoutes(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "EmployeeTitleGetAll",
-                routeTemplate: "api/employeetitles",
-                defaults: new { controller = "EmployeeTitles", action = "GetAll" },
+                name: "ShiftTypeGetAll",
+                routeTemplate: "api/shifttypes",
+                defaults: new { controller = "ShiftTypes", action = "GetAll" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTitleGet",
-                routeTemplate: "api/employeetitles/{id}",
-                defaults: new { controller = "EmployeeTitles", action = "Get" },
+                name: "ShiftTypeGet",
+                routeTemplate: "api/shifttypes/{id}",
+                defaults: new { controller = "ShiftTypes", action = "Get" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTitlePost",
-                routeTemplate: "api/employeetitles",
-                defaults: new { controller = "EmployeeTitles", action = "Post" },
+                name: "ShiftTypePost",
+                routeTemplate: "api/shifttypes",
+                defaults: new { controller = "ShiftTypes", action = "Post" },
                 constraints: new { httpMethod = new HttpMethodConstraint("POST") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTitlePut",
-                routeTemplate: "api/employeetitles/{id}",
-                defaults: new { controller = "EmployeeTitles", action = "Put" },
+                name: "ShiftTypePut",
+                routeTemplate: "api/shifttypes/{id}",
+                defaults: new { controller = "ShiftTypes", action = "Put" },
                 constraints: new { httpMethod = new HttpMethodConstraint("PUT") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTitleDelete",
-                routeTemplate: "api/employeetitles/{id}",
-                defaults: new { controller = "EmployeeTitles", action = "Delete" },
+                name: "ShiftTypeDelete",
+                routeTemplate: "api/shifttypes/{id}",
+                defaults: new { controller = "ShiftTypes", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }
 
-        private static void EmployeeTypeRoutes(HttpConfiguration config)
+        private static void SeasonRoutes(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "EmployeeTypeGetAll",
-                routeTemplate: "api/employeetypes",
-                defaults: new { controller = "EmployeeTypes", action = "GetAll" },
+                name: "SeasonGetAll",
+                routeTemplate: "api/seasons",
+                defaults: new { controller = "Seasons", action = "GetAll" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTypeGet",
-                routeTemplate: "api/employeetypes/{id}",
-                defaults: new { controller = "EmployeeTypes", action = "Get" },
+                name: "SeasonGet",
+                routeTemplate: "api/seasons/{id}",
+                defaults: new { controller = "Seasons", action = "Get" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTypePost",
-                routeTemplate: "api/employeetypes",
-                defaults: new { controller = "EmployeeTypes", action = "Post" },
+                name: "SeasonPost",
+                routeTemplate: "api/seasons",
+                defaults: new { controller = "Seasons", action = "Post" },
                 constraints: new { httpMethod = new HttpMethodConstraint("POST") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTypePut",
-                routeTemplate: "api/employeetypes/{id}",
-                defaults: new { controller = "EmployeeTypes", action = "Put" },
+                name: "SeasonPut",
+                routeTemplate: "api/seasons/{id}",
+                defaults: new { controller = "Seasons", action = "Put" },
                 constraints: new { httpMethod = new HttpMethodConstraint("PUT") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeTypeDelete",
-                routeTemplate: "api/employeetypes/{id}",
-                defaults: new { controller = "EmployeeTypes", action = "Delete" },
+                name: "SeasonDelete",
+                routeTemplate: "api/seasons/{id}",
+                defaults: new { controller = "Seasons", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }
 
-        private static void EmployeeRoutes(HttpConfiguration config)
+        private static void PriorityRoutes(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "EmployeeGetAll",
-                routeTemplate: "api/employees",
-                defaults: new { controller = "Employees", action = "GetAll" },
+                name: "PriorityGetAll",
+                routeTemplate: "api/priorities",
+                defaults: new { controller = "Priorities", action = "GetAll" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeGet",
-                routeTemplate: "api/employees/{id}",
-                defaults: new { controller = "Employees", action = "Get" },
+                name: "PriorityGet",
+                routeTemplate: "api/priorities/{id}",
+                defaults: new { controller = "Priorities", action = "Get" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeePost",
-                routeTemplate: "api/employees",
-                defaults: new { controller = "Employees", action = "Post" },
+                name: "PriorityPost",
+                routeTemplate: "api/priorities",
+                defaults: new { controller = "Priorities", action = "Post" },
                 constraints: new { httpMethod = new HttpMethodConstraint("POST") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeePut",
-                routeTemplate: "api/employees/{id}",
-                defaults: new { controller = "Employees", action = "Put" },
+                name: "PriorityPut",
+                routeTemplate: "api/priorities/{id}",
+                defaults: new { controller = "Priorities", action = "Put" },
                 constraints: new { httpMethod = new HttpMethodConstraint("PUT") }
                 );
 
             config.Routes.MapHttpRoute(
-                name: "EmployeeDelete",
-                routeTemplate: "api/employees/{id}",
-                defaults: new { controller = "Employees", action = "Delete" },
+                name: "PriorityDelete",
+                routeTemplate: "api/priorities/{id}",
+                defaults: new { controller = "Priorites", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }

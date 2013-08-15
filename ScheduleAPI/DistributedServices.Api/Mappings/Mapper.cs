@@ -7,54 +7,51 @@ namespace DistributedServices.Api.Mappings
 {
     public static class Mapper
     {
-        public static Entities.Dto.Employee Map(Employee item)
+        public static Entities.Dto.Shift Map(Infrastructure.Data.MainModule.Models.Shift item)
         {
             if (item == null)
-                return new Entities.Dto.Employee();
+                return new Entities.Dto.Shift();
             
-            var dto = new Entities.Dto.Employee()
+            var dto = new Entities.Dto.Shift()
             {
                 ClientId = item.ClientId,
                 Id = item.Id,
-                TitleId = item.TitleId,
-                LoginId = item.LoginId,
-                IsLocal = item.IsLocal,
-                EmployeeTypeId = item.EmployeeTypeId,
-                Current = item.Current,
-                PersonId = item.PersonId,
-                RosterId = item.RosterId,
-                EmployeeType = Mapper.Map(item.EmployeeType),
-                Person = Mapper.Map(item.Person),
-                Title = Mapper.Map(item.Title)
+                Date = item.Date,
+                Start = item.Start,
+                End = item.End,
+                SeasonId = item.SeasonId,
+                PriorityId = item.PriorityId,
+                Season = Mapper.Map(item.Season),
+                Priority = Mapper.Map(item.Priority),
+                ShiftType = Mapper.Map(item.ShiftType)
             };
 
             return dto;
         }
 
-        public static DistributedServices.Entities.Dto.Person Map(Domain.MainModule.Entities.Person item)
+        public static DistributedServices.Entities.Dto.Season Map(Infrastructure.Data.MainModule.Models.Season item)
         {
             if (item == null)
-                return new Entities.Dto.Person();
+                return new Entities.Dto.Season();
             
-            var dto = new Entities.Dto.Person()
+            var dto = new Entities.Dto.Season()
             {
-                LastName = item.LastName,
-                FirstName = item.FirstName,
-                MiddleName = item.MiddleName,
-                DateOfBirth = item.DateOfBirth,
-                GenderId = item.GenderId,
+                Name = item.Name,
+                Description = item.Description,
+                Start = item.Start,
+                End = item.End,
                 Id = item.Id
             };
 
             return dto;
         }
 
-        public static DistributedServices.Entities.Dto.EmployeeTitle Map(Domain.MainModule.Entities.EmployeeTitle item)
+        public static DistributedServices.Entities.Dto.Priority Map(Infrastructure.Data.MainModule.Models.Priority item)
         {
             if (item == null)
-                return new Entities.Dto.EmployeeTitle();
+                return new Entities.Dto.Priority();
             
-            var dto = new Entities.Dto.EmployeeTitle()
+            var dto = new Entities.Dto.Priority()
             {
                 Name = item.Name,
                 Description = item.Description,
@@ -64,12 +61,12 @@ namespace DistributedServices.Api.Mappings
             return dto;
         }
 
-        public static DistributedServices.Entities.Dto.EmployeeType Map(Domain.MainModule.Entities.EmployeeType item)
+        public static DistributedServices.Entities.Dto.ShiftType Map(Infrastructure.Data.MainModule.Models.ShiftType item)
         {
             if (item == null)
-                return new Entities.Dto.EmployeeType();
+                return new Entities.Dto.ShiftType();
             
-            var dto = new Entities.Dto.EmployeeType()
+            var dto = new Entities.Dto.ShiftType()
             {
                 Name = item.Name,
                 Description = item.Description,

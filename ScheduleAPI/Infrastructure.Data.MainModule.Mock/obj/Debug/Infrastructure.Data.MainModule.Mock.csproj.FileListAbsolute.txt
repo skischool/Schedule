@@ -55,3 +55,17 @@ C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\De
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.csprojResolveAssemblyReference.cache
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Infrastructure.Data.MainModule.Mock.dll.config
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Infrastructure.Data.MainModule.Mock.dll
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Infrastructure.Data.MainModule.Mock.pdb
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Domain.MainModule.dll
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Domain.MainModule.Entities.dll
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.dll
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Domain.MainModule.Entities.pdb
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Domain.MainModule.pdb
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.xml
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.csprojResolveAssemblyReference.cache
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.dll
+C:\Git\SkiSchool\Schedule\ScheduleAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.pdb
