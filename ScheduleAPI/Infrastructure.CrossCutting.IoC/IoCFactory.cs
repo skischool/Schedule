@@ -89,13 +89,13 @@ namespace Infrastructure.CrossCutting.IoC
             container.RegisterType<IEmployeeTitleService, EmployeeTitleService>(new TransientLifetimeManager());
 
             //Register Repositories mappings
-            container.RegisterType<IEmployeeRepository, EmployeeRepository>(new TransientLifetimeManager());
+            container.RegisterType<IEmployeeRepository, ShiftRepository>(new TransientLifetimeManager());
 
             container.RegisterType<IPersonRepository, PersonRepository>(new TransientLifetimeManager());
 
             container.RegisterType<IEmployeeTypeRepository, EmployeeTypeRepository>(new TransientLifetimeManager());
 
-            container.RegisterType<IEmployeeTitleRepository, EmployeeTitleRepository>(new TransientLifetimeManager());
+            container.RegisterType<IEmployeeTitleRepository, ShiftTypeRepository>(new TransientLifetimeManager());
 
             //Register crosscuting mappings
             // container.RegisterType<ITraceManager, TraceManager>(new TransientLifetimeManager());

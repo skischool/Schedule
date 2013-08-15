@@ -49,18 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeTypes\IEmployeeTypeRepository.cs" />
-    <Compile Include="EmployeeTypes\IEmployeeTypeService.cs" />
-    <Compile Include="EmployeeTypes\EmployeeTypeService.cs" />
-    <Compile Include="EmployeeTitles\IEmployeeTitleRepository.cs" />
-    <Compile Include="EmployeeTitles\IEmployeeTitleService.cs" />
-    <Compile Include="EmployeeTitles\EmployeeTitleService.cs" />
-    <Compile Include="Persons\PersonService.cs" />
-    <Compile Include="Persons\IPersonRepository.cs" />
-    <Compile Include="Persons\IPersonService.cs" />
-    <Compile Include="Employees\EmployeeService.cs" />
-    <Compile Include="Employees\IEmployeeRepository.cs" />
-    <Compile Include="Employees\IEmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
