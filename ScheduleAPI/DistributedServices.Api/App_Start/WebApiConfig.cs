@@ -30,7 +30,7 @@ namespace DistributedServices.Api
             config.Routes.MapHttpRoute(
                 name: "ShiftGetAll",
                 routeTemplate: "api/shifts",
-                defaults: new { controller = "Shift", action = "GetAll" },
+                defaults: new { controller = "Shifts", action = "GetAll" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") }
                 );
 
@@ -172,7 +172,7 @@ namespace DistributedServices.Api
             config.Routes.MapHttpRoute(
                 name: "PriorityDelete",
                 routeTemplate: "api/priorities/{id}",
-                defaults: new { controller = "Priorites", action = "Delete" },
+                defaults: new { controller = "Priorities", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }

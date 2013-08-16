@@ -18,6 +18,7 @@ namespace Infrastructure.Data.MainModule.Repositories
 
         public Priority Add(Priority item)
         {
+
             var addedItem = _context.Priorities.Add(item);
 
             addedItem.DateCreated = DateTime.Now;

@@ -19,9 +19,6 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(50);
 
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             // Table & Column Mappings
             this.ToTable("Priorities");
             this.Property(t => t.Name).HasColumnName("Name");

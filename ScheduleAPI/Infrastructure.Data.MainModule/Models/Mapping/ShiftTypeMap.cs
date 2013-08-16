@@ -19,9 +19,6 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(200);
 
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             // Table & Column Mappings
             this.ToTable("ShiftTypes");
             this.Property(t => t.Name).HasColumnName("Name");
