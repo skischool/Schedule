@@ -17,3 +17,6 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 *.dll
+*.pdb
+*.cache
+*.dll
