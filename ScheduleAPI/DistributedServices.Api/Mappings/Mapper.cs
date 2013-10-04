@@ -21,6 +21,7 @@ namespace DistributedServices.Api.Mappings
                 End = item.End,
                 SeasonId = item.SeasonId,
                 PriorityId = item.PriorityId,
+                ShiftTypeId = item.TypeId,
                 Season = Mapper.Map(item.Season),
                 Priority = Mapper.Map(item.Priority),
                 ShiftType = Mapper.Map(item.ShiftType)
