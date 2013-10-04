@@ -396,27 +396,27 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftsController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.ShiftsController.GetAll(System.String)">
             <summary>
             All of the items.
             </summary>
             <returns>All items.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Post(Infrastructure.Data.MainModule.Models.Shift)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Post(Infrastructure.Data.MainModule.Models.Shift,System.String)">
             <summary>
             Creates a new item.
             </summary>
             <param name="item">New item to create in the given bundle.</param>
             <returns>The recently created item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Shift)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Shift,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -424,34 +424,34 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftsController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>The recently deleted item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.SeasonsController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.SeasonsController.GetAll(System.String)">
             <summary>
             All of the items.
             </summary>
             <returns>All items.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Post(Infrastructure.Data.MainModule.Models.Season)">
+        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Post(Infrastructure.Data.MainModule.Models.Season,System.String)">
             <summary>
             Creates a new item.
             </summary>
             <param name="item">New item to create in the given bundle.</param>
             <returns>The recently created item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Season)">
+        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Season,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -459,34 +459,34 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.SeasonsController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>The recently deleted item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.GetAll(System.String)">
             <summary>
             All of the items.
             </summary>
             <returns>All items.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Post(Infrastructure.Data.MainModule.Models.Priority)">
+        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Post(Infrastructure.Data.MainModule.Models.Priority,System.String)">
             <summary>
             Creates a new item.
             </summary>
             <param name="item">New item to create in the given bundle.</param>
             <returns>The recently created item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Priority)">
+        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Priority,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -494,34 +494,34 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.PrioritiesController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>The recently deleted item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.GetAll(System.String)">
             <summary>
             All of the items.
             </summary>
             <returns>All items.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Post(Infrastructure.Data.MainModule.Models.ShiftType)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Post(Infrastructure.Data.MainModule.Models.ShiftType,System.String)">
             <summary>
             Creates a new item.
             </summary>
             <param name="item">New item to create in the given bundle.</param>
             <returns>The recently created item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Put(System.Int32,Infrastructure.Data.MainModule.Models.ShiftType)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Put(System.Int32,Infrastructure.Data.MainModule.Models.ShiftType,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -529,7 +529,7 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.ShiftTypesController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>

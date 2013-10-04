@@ -15,8 +15,12 @@ namespace Infrastructure.Data.MainModule.Repositories
             _context = new ScheduleApiContext();
         }
 
-        public Shift Add(Shift item)
+        public Shift Add(Shift item, string clientToken)
         {
+            var guid = Guid.Parse(clientToken);
+
+            item.ClientToken = guid;
+
             var addedItem = _context.Shifts.Add(item);
 
             addedItem.DateCreated = DateTime.Now;
@@ -26,9 +30,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return addedItem;
         }
 
-        public Shift Update(Shift item)
+        public Shift Update(Shift item, string clientToken)
         {
-            var itemToUpdate = _context.Shifts.FirstOrDefault(b => b.Id == item.Id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToUpdate = _context.Shifts.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == guid);
 
             itemToUpdate.ClientId = item.ClientId;
 
@@ -59,9 +65,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return itemToUpdate;
         }
 
-        public Shift Delete(int id)
+        public Shift Delete(int id, string clientToken)
         {
-            var itemToDelete = _context.Shifts.FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToDelete = _context.Shifts.FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             var deletedItem = _context.Shifts.Remove(itemToDelete);
 
@@ -70,16 +78,20 @@ namespace Infrastructure.Data.MainModule.Repositories
             return deletedItem;
         }
 
-        public IEnumerable<Shift> List()
+        public IEnumerable<Shift> List(string clientToken)
         {
-            var items = _context.Shifts;
+            var guid = Guid.Parse(clientToken);
+
+            var items = _context.Shifts.Where(b => b.ClientToken == guid);
 
             return items;
         }
 
-        public Shift Get(int id)
+        public Shift Get(int id, string clientToken)
         {
-            var item = _context.Shifts.ToList().FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var item = _context.Shifts.ToList().FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             return item;
         }

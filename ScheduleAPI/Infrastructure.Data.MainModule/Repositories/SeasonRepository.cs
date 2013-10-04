@@ -16,8 +16,12 @@ namespace Infrastructure.Data.MainModule.Repositories
             _context = new ScheduleApiContext();
         }
 
-        public Season Add(Season item)
+        public Season Add(Season item, string clientToken)
         {
+            var guid = Guid.Parse(clientToken);
+
+            item.ClientToken = guid;
+
             var addedItem = _context.Seasons.Add(item);
 
             addedItem.DateCreated = DateTime.Now;
@@ -27,9 +31,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return addedItem;
         }
 
-        public Season Update(Season item)
+        public Season Update(Season item, string clientToken)
         {
-            var itemToUpdate = _context.Seasons.FirstOrDefault(b => b.Id == item.Id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToUpdate = _context.Seasons.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == guid);
 
             itemToUpdate.Name = item.Name;
 
@@ -46,9 +52,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return itemToUpdate;
         }
 
-        public Season Delete(int id)
+        public Season Delete(int id, string clientToken)
         {
-            var itemToDelete = _context.Seasons.FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToDelete = _context.Seasons.FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             var deletedItem = _context.Seasons.Remove(itemToDelete);
 
@@ -57,16 +65,20 @@ namespace Infrastructure.Data.MainModule.Repositories
             return deletedItem;
         }
 
-        public IEnumerable<Season> List()
+        public IEnumerable<Season> List(string clientToken)
         {
-            var items = _context.Seasons;
+            var guid = Guid.Parse(clientToken);
+
+            var items = _context.Seasons.Where(b => b.ClientToken == guid);
 
             return items;
         }
 
-        public Season Get(int id)
+        public Season Get(int id, string clientToken)
         {
-            var item = _context.Seasons.ToList().FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var item = _context.Seasons.ToList().FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             return item;
         }

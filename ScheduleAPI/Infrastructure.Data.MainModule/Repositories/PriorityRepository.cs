@@ -16,8 +16,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             _context = new ScheduleApiContext();
         }
 
-        public Priority Add(Priority item)
+        public Priority Add(Priority item, string clientToken)
         {
+            var guid = Guid.Parse(clientToken);
+
+            item.ClientToken = guid;
 
             var addedItem = _context.Priorities.Add(item);
 
@@ -28,9 +31,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return addedItem;
         }
 
-        public Priority Update(Priority item)
+        public Priority Update(Priority item, string clientToken)
         {
-            var itemToUpdate = _context.Priorities.FirstOrDefault(b => b.Id == item.Id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToUpdate = _context.Priorities.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == guid);
 
             itemToUpdate.Name = item.Name;
 
@@ -43,9 +48,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return itemToUpdate;
         }
 
-        public Priority Delete(int id)
+        public Priority Delete(int id, string clientToken)
         {
-            var itemToDelete = _context.Priorities.FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToDelete = _context.Priorities.FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             var deletedItem = _context.Priorities.Remove(itemToDelete);
 
@@ -54,16 +61,20 @@ namespace Infrastructure.Data.MainModule.Repositories
             return deletedItem;
         }
 
-        public IEnumerable<Priority> List()
+        public IEnumerable<Priority> List(string clientToken)
         {
-            var items = _context.Priorities;
+            var guid = Guid.Parse(clientToken);
+
+            var items = _context.Priorities.Where(b => b.ClientToken == guid);
 
             return items;
         }
 
-        public Priority Get(int id)
+        public Priority Get(int id, string clientToken)
         {
-            var item = _context.Priorities.ToList().FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var item = _context.Priorities.ToList().FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             return item;
         }
