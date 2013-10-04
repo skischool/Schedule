@@ -20,7 +20,6 @@ namespace Infrastructure.Data.MainModule.Models
         public DbSet<Season> Seasons { get; set; }
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<ShiftType> ShiftTypes { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,7 +27,6 @@ namespace Infrastructure.Data.MainModule.Models
             modelBuilder.Configurations.Add(new SeasonMap());
             modelBuilder.Configurations.Add(new ShiftMap());
             modelBuilder.Configurations.Add(new ShiftTypeMap());
-            modelBuilder.Configurations.Add(new sysdiagramMap());
         }
     }
 }

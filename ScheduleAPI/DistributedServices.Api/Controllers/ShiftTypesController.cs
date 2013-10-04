@@ -26,9 +26,9 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <returns>All items.</returns>
         //[GET("api/shifttypes")]
-        public HttpResponseMessage GetAll()
+        public HttpResponseMessage GetAll([FromUri]string clientToken)
         {
-            var items = _repository.List();
+            var items = _repository.List(clientToken);
 
             var itemDto = items.Select(i => Mapper.Map(i));
 
@@ -40,9 +40,9 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>Employee title.</returns>
-        public HttpResponseMessage Get([FromUri]int id)
+        public HttpResponseMessage Get([FromUri]int id, [FromUri]string clientToken)
         {
-            var item = _repository.Get(id);
+            var item = _repository.Get(id, clientToken);
 
             var itemDto = Mapper.Map(item);
 
@@ -54,12 +54,12 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="item">New item to create in the given bundle.</param>
         /// <returns>The recently created item.</returns>
-        public HttpResponseMessage Post([FromBody]ShiftType item)
+        public HttpResponseMessage Post([FromBody]ShiftType item, [FromUri]string clientToken)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new ShiftType());
 
-            var itemDto = Mapper.Map(_repository.Add(item));
+            var itemDto = Mapper.Map(_repository.Add(item, clientToken));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }
@@ -70,14 +70,14 @@ namespace DistributedServices.Api.Controllers
         /// <param name="id">Unique identifier for the item to update.</param>
         /// <param name="item">Item to update.</param>
         /// <returns>The recently updated item.</returns>
-        public HttpResponseMessage Put([FromUri]int id, [FromBody]ShiftType item)
+        public HttpResponseMessage Put([FromUri]int id, [FromBody]ShiftType item, [FromUri]string clientToken)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new ShiftType());
 
             item.Id = id;
 
-            var itemDto = Mapper.Map(_repository.Update(item));
+            var itemDto = Mapper.Map(_repository.Update(item, clientToken));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }
@@ -87,9 +87,9 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>The recently deleted item.</returns>
-        public HttpResponseMessage Delete([FromUri]int id)
+        public HttpResponseMessage Delete([FromUri]int id, [FromUri]string clientToken)
         {
-            var itemDto = Mapper.Map(_repository.Delete(id));
+            var itemDto = Mapper.Map(_repository.Delete(id, clientToken));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }

@@ -28,6 +28,7 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
             this.Property(t => t.DateModified).HasColumnName("DateModified");
             this.Property(t => t.Start).HasColumnName("Start");
             this.Property(t => t.End).HasColumnName("End");
+            this.Property(t => t.ClientToken).HasColumnName("ClientToken");
         }
     }
 }

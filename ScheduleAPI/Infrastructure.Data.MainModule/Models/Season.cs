@@ -17,6 +17,7 @@ namespace Infrastructure.Data.MainModule.Models
         public Nullable<System.DateTime> DateModified { get; set; }
         public System.DateTime Start { get; set; }
         public System.DateTime End { get; set; }
+        public System.Guid ClientToken { get; set; }
         public virtual ICollection<Shift> Shifts { get; set; }
     }
 }
