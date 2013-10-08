@@ -20,6 +20,7 @@ namespace Infrastructure.Data.MainModule.Models
         public Nullable<System.DateTime> DateModified { get; set; }
         public System.DateTime DateCreated { get; set; }
         public System.Guid ClientToken { get; set; }
+        public Nullable<int> EmployeeId { get; set; }
         public virtual Priority Priority { get; set; }
         public virtual Season Season { get; set; }
         public virtual ShiftType ShiftType { get; set; }

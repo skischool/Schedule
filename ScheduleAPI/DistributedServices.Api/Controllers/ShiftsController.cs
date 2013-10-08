@@ -34,6 +34,24 @@ namespace DistributedServices.Api.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }
 
+        public HttpResponseMessage GetEmployeeShifts([FromUri]string clientToken, [FromUri]int employeeId)
+        {
+            var items = _repository.List(clientToken).Where(e => e.EmployeeId == employeeId);
+
+            var itemDto = items.Select(i => Mapper.Map(i));
+
+            return Request.CreateResponse(HttpStatusCode.OK, itemDto);
+        }
+
+        public HttpResponseMessage GetAvailableShifts([FromUri]string clientToken)
+        {
+            var items = _repository.List(clientToken).Where(e => e.EmployeeId == null);
+
+            var itemDto = items.Select(i => Mapper.Map(i));
+
+            return Request.CreateResponse(HttpStatusCode.OK, itemDto);
+        }
+
         /// <summary>
         /// A item.
         /// </summary>

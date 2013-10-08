@@ -35,6 +35,20 @@ namespace DistributedServices.Api
                 );
 
             config.Routes.MapHttpRoute(
+                name: "GetEmployeeShifts",
+                routeTemplate: "api/employees/{employeeId}/shifts",
+                defaults: new { controller = "Shifts", action = "GetEmployeeShifts" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "GetAvailableShifts",
+                routeTemplate: "api/shifts/available",
+                defaults: new { controller = "Shifts", action = "GetAvailableShifts" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+                );
+
+            config.Routes.MapHttpRoute(
                 name: "Shift",
                 routeTemplate: "api/shifts/{id}",
                 defaults: new { controller = "Shifts", action = "Get" },

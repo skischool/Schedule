@@ -16,6 +16,7 @@ namespace DistributedServices.Api.Mappings
             {
                 ClientId = item.ClientId,
                 Id = item.Id,
+                EmployeeId = item.EmployeeId,
                 Date = item.Date,
                 Start = item.Start,
                 End = item.End,

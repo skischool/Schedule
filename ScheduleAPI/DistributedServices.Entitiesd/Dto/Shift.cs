@@ -19,6 +19,7 @@ namespace DistributedServices.Entities.Dto
         public bool CanRemove { get; set; }
         public bool CanUpdate { get; set; }
         public bool Assigned { get; set; }
+        public int? EmployeeId { get; set; }
         public int Id { get; set; }
         
         public virtual Priority Priority { get; set; }
