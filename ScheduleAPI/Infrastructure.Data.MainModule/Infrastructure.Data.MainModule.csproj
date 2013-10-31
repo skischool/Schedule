@@ -52,12 +52,14 @@
     <Compile Include="Models\Mapping\PriorityMap.cs" />
     <Compile Include="Models\Mapping\SeasonMap.cs" />
     <Compile Include="Models\Mapping\ShiftMap.cs" />
+    <Compile Include="Models\Mapping\ShiftTimeMap.cs" />
     <Compile Include="Models\Mapping\ShiftTypeMap.cs" />
     <Compile Include="Models\Mapping\sysdiagramMap.cs" />
     <Compile Include="Models\Priority.cs" />
     <Compile Include="Models\ScheduleApiContext.cs" />
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\Shift.cs" />
+    <Compile Include="Models\ShiftTime.cs" />
     <Compile Include="Models\ShiftType.cs" />
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

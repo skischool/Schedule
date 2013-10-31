@@ -19,6 +19,7 @@ namespace Infrastructure.Data.MainModule.Models
         public DbSet<Priority> Priorities { get; set; }
         public DbSet<Season> Seasons { get; set; }
         public DbSet<Shift> Shifts { get; set; }
+        public DbSet<ShiftTime> ShiftTimes { get; set; }
         public DbSet<ShiftType> ShiftTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -26,6 +27,7 @@ namespace Infrastructure.Data.MainModule.Models
             modelBuilder.Configurations.Add(new PriorityMap());
             modelBuilder.Configurations.Add(new SeasonMap());
             modelBuilder.Configurations.Add(new ShiftMap());
+            modelBuilder.Configurations.Add(new ShiftTimeMap());
             modelBuilder.Configurations.Add(new ShiftTypeMap());
         }
     }
