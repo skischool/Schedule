@@ -23,6 +23,8 @@ namespace DistributedServices.Api
             SeasonRoutes(config);
 
             PriorityRoutes(config);
+
+            ShiftTimeRoutes(config);
         }
 
         private static void ShiftRoutes(HttpConfiguration config)
@@ -187,6 +189,44 @@ namespace DistributedServices.Api
                 name: "PriorityDelete",
                 routeTemplate: "api/priorities/{id}",
                 defaults: new { controller = "Priorities", action = "Delete" },
+                constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
+                );
+        }
+
+        private static void ShiftTimeRoutes(HttpConfiguration config)
+        {
+            config.Routes.MapHttpRoute(
+                name: "ShiftTimeGetAll",
+                routeTemplate: "api/shifttimes",
+                defaults: new { controller = "ShiftTimes", action = "GetAll" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "ShiftTimeGet",
+                routeTemplate: "api/shifttimes/{id}",
+                defaults: new { controller = "ShiftTimes", action = "Get" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "ShiftTimePost",
+                routeTemplate: "api/shifttimes",
+                defaults: new { controller = "ShiftTimes", action = "Post" },
+                constraints: new { httpMethod = new HttpMethodConstraint("POST") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "ShiftTimePut",
+                routeTemplate: "api/shifttimes/{id}",
+                defaults: new { controller = "ShiftTimes", action = "Put" },
+                constraints: new { httpMethod = new HttpMethodConstraint("PUT") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "ShiftTimeDelete",
+                routeTemplate: "api/shifttimes/{id}",
+                defaults: new { controller = "ShiftTimes", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }

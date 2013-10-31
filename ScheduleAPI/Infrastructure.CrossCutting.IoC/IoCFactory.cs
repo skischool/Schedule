@@ -83,6 +83,8 @@ namespace Infrastructure.CrossCutting.IoC
 
             container.RegisterType<IShiftTypeRepository, ShiftTypeRepository>(new TransientLifetimeManager());
 
+            container.RegisterType<IShiftTimeRepository, ShiftTimeRepository>(new TransientLifetimeManager());
+
             container.RegisterType<ISeasonRepository, SeasonRepository>(new TransientLifetimeManager());
 
             container.RegisterType<IPriorityRepository, PriorityRepository>(new TransientLifetimeManager());

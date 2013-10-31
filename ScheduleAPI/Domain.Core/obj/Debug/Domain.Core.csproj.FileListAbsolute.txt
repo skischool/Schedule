@@ -59,6 +59,5 @@ C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\bin\Debug
 C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\bin\Debug\EntityFramework.xml
 C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\bin\Debug\EntityFramework.SqlServer.xml
-C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\obj\Debug\Domain.Core.csprojResolveAssemblyReference.cache
 C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\obj\Debug\Domain.Core.dll
 C:\Git\SkiSchool\Schedule\ScheduleAPI\Schedule\ScheduleAPI\Domain.Core\obj\Debug\Domain.Core.pdb

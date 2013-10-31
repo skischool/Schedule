@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using Infrastructure.Data.MainModule.Models;
 namespace Infrastructure.Data.MainModule.Repositories
 {
     public interface IShiftTypeRepository
     {
-        Infrastructure.Data.MainModule.Models.ShiftType Add(Infrastructure.Data.MainModule.Models.ShiftType item, string clientToken);
-        Infrastructure.Data.MainModule.Models.ShiftType Delete(int id, string clientToken);
-        Infrastructure.Data.MainModule.Models.ShiftType Get(int id, string clientToken);
-        System.Collections.Generic.IEnumerable<Infrastructure.Data.MainModule.Models.ShiftType> List(string clientToken);
-        Infrastructure.Data.MainModule.Models.ShiftType Update(Infrastructure.Data.MainModule.Models.ShiftType item, string clientToken);
+        ShiftType Add(ShiftType item, string clientToken);
+        ShiftType Delete(int id, string clientToken);
+        ShiftType Get(int id, string clientToken);
+        IEnumerable<ShiftType> List(string clientToken);
+        ShiftType Update(ShiftType item, string clientToken);
     }
 }

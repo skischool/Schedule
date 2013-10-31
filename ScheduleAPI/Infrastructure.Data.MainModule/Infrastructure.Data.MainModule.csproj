@@ -66,10 +66,12 @@
     <Compile Include="Repositories\IPriorityRepository.cs" />
     <Compile Include="Repositories\ISeasonRepository.cs" />
     <Compile Include="Repositories\IShiftRepository.cs" />
+    <Compile Include="Repositories\IShiftTimeRepository.cs" />
     <Compile Include="Repositories\IShiftTypeRepository.cs" />
     <Compile Include="Repositories\SeasonRepository.cs" />
     <Compile Include="Repositories\PriorityRepository.cs" />
     <Compile Include="Repositories\ShiftRepository.cs" />
+    <Compile Include="Repositories\ShiftTimeRepository.cs" />
     <Compile Include="Repositories\ShiftTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>

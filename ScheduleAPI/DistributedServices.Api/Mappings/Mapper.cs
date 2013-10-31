@@ -77,5 +77,22 @@ namespace DistributedServices.Api.Mappings
 
             return dto;
         }
+
+        public static DistributedServices.Entities.Dto.ShiftTime Map(Infrastructure.Data.MainModule.Models.ShiftTime item)
+        {
+            if (item == null)
+                return new Entities.Dto.ShiftTime();
+
+            var dto = new Entities.Dto.ShiftTime()
+            {
+                Name = item.Name,
+                Description = item.Description,
+                Start = item.Start,
+                End = item.End,
+                Id = item.Id
+            };
+
+            return dto;
+        }
     }
 }
