@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Data.MainModule.Models;
 using Domain.Core;
+using System.Data.Entity.Validation;
 
 namespace Infrastructure.Data.MainModule.Repositories
 {
@@ -21,7 +22,23 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             item.ClientToken = guid;
 
-            var addedItem = _context.Shifts.Add(item);
+            var shiftToAdd = new Shift();
+
+            shiftToAdd.Assigned = item.Assigned;
+            shiftToAdd.CanAdd = item.CanAdd;
+            shiftToAdd.CanRemove = item.CanRemove;
+            shiftToAdd.CanUpdate = item.CanUpdate;
+            shiftToAdd.ClientId = item.ClientId;
+            shiftToAdd.ClientToken = item.ClientToken;
+            shiftToAdd.Date = item.Date;
+            shiftToAdd.EmployeeId = item.EmployeeId;
+            shiftToAdd.End = item.End;
+            shiftToAdd.PriorityId = item.Priority.Id;
+            shiftToAdd.SeasonId = item.Season.Id;
+            shiftToAdd.Start = item.Start;
+            shiftToAdd.TypeId = item.ShiftType.Id;
+
+            var addedItem = _context.Shifts.Add(shiftToAdd);
 
             addedItem.DateCreated = DateTime.Now;
 
@@ -36,27 +53,7 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             var itemToUpdate = _context.Shifts.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == guid);
 
-            itemToUpdate.ClientId = item.ClientId;
-
-            itemToUpdate.Date = item.Date;
-
-            itemToUpdate.Start = item.Start;
-
-            itemToUpdate.End = item.End;
-
-            itemToUpdate.ClientId = item.ClientId;
-
-            itemToUpdate.TypeId = item.TypeId;
-
-            itemToUpdate.PriorityId = item.PriorityId;
-
-            itemToUpdate.CanAdd = item.CanAdd;
-
-            itemToUpdate.CanRemove = item.CanRemove;
-
-            itemToUpdate.CanUpdate = item.CanUpdate;
-
-            itemToUpdate.Id = item.Id;
+            itemToUpdate.EmployeeId = item.EmployeeId;
 
             itemToUpdate.DateModified = DateTime.Now;
 
